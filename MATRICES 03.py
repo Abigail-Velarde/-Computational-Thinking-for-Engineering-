@@ -1,6 +1,6 @@
 from random import randint
 
-"""Funcion para crear una matriz cuadrada de -1"""
+# Hace una matriz cuadrada llena de -1
 def crea_matriz(n):
     matriz=[]
     for i in range(n):
@@ -11,14 +11,14 @@ def crea_matriz(n):
         matriz.append(lista)
     return matriz     
  
-"""Funcion para imprimir matriz por valores""" 
+# Imprime la matriz bonita
 def imprime_matriz(matriz):
     for lista in matriz:
         for valor in lista:
             print(valor,end="\t")
         print()    
 
-"""Funcion que contiene los numeros de la columna en que se encuentra cada valor"""
+# Hace una matriz donde cada número es su número de columna
 def matriz_columna(n):
     matriz=[]
     for i in range(n):
@@ -29,6 +29,7 @@ def matriz_columna(n):
         matriz.append(lista)    
     return matriz
 
+# Hace una matriz donde cada número es su número de fila
 def matriz_renglon(n):
     matriz=[]
     for i in range(n):
@@ -39,6 +40,7 @@ def matriz_renglon(n):
         matriz.append(lista)    
     return matriz
 
+# Hace una matriz con números del 1 al n*n
 def matriz_secuencia(n):
     cont=1
     matriz=[]
@@ -51,6 +53,7 @@ def matriz_secuencia(n):
         matriz.append(lista)
     return matriz
 
+# Hace una matriz con números al azar entre 1 y 20
 def matriz_random(n):
     m=[]
     for i in range(n):
@@ -61,6 +64,7 @@ def matriz_random(n):
         m.append(l)
     return m   
 
+# Hace una matriz con números al azar entre 0 y 3
 def matriz_ceros(n):
     m=[]
     for i in range(n):
@@ -71,6 +75,7 @@ def matriz_ceros(n):
         m.append(l)
     return m   
 
+# Cuenta cuántos números pares hay en la matriz
 def cuenta_pares(matriz):
     par=0
     for i in range(len(matriz)):
@@ -79,6 +84,7 @@ def cuenta_pares(matriz):
                 par += 1
     return par
 
+# Cuenta cuántos números positivos o cero hay en la matriz
 def cuenta_positivos(matriz):
     positivos=0
     for i in range(len(matriz)):
@@ -87,6 +93,7 @@ def cuenta_positivos(matriz):
                 positivos += 1
     return positivos  
         
+# Hace una matriz con números del 1 al n*n, pero por columnas
 def matriz_secuencia_columna(n):
     matriz=[]
     for i in range(n): 
@@ -96,6 +103,7 @@ def matriz_secuencia_columna(n):
         matriz.append(lista)
     return matriz
 
+# Cambia todos los números negativos por ceros
 def cambiar_negativos(matriz,n):
     for i in range(n):
         for j in range(n): 
@@ -107,6 +115,7 @@ def cambiar_negativos(matriz,n):
                 dato=dato
     return matriz
 
+# Cuenta cuántas veces aparece un número en la matriz
 def cuenta_repeticiones(matriz,x):
     rep=0
     for i in range(len(matriz)):
@@ -115,6 +124,7 @@ def cuenta_repeticiones(matriz,x):
                 rep += 1
     return rep
 
+# Dice si un número está en la matriz o no
 def busca(matriz,x):
     cant=0
     for i in range(len(matriz)):
@@ -127,6 +137,7 @@ def busca(matriz,x):
         existencia="False"
     return existencia
 
+# Suma todos los números mayores o iguales a 5
 def suma_mayores5(matriz):
     suma=0
     for i in range(len(matriz)):
@@ -136,6 +147,7 @@ def suma_mayores5(matriz):
                 suma= suma + dato
     return suma
 
+# Cambia los ceros por la suma de su fila y columna
 def cambiar_ceros(matriz):
     for i in range(len(matriz)):
         for j in range(len(matriz[0])): 
